@@ -1,0 +1,468 @@
+/* ----------------- RESET & FONT ----------------- */
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+* {
+  box-sizing: border-box;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  padding: 60px;
+  background: #f5f5f5;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode {
+  background: #1a1a1a;
+}
+
+/* ----------------- PROFILE CARD ----------------- */
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 1150px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+body.dark-mode .profile-card {
+  background: #242424;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------- LEFT ----------------- */
+.pfp {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ----------------- MIDDLE ----------------- */
+.middle {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.name {
+  font-size: 32px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .name {
+  color: white;
+}
+
+.verification-icon {
+  width: 25px;
+  margin-top: 2px;
+}
+
+.location-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: gray;
+  margin-top: 4px;
+}
+
+.location-icon {
+  width: 16px;
+}
+
+.role-desc {
+  margin-top: 6px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .role-desc {
+  color: #aaa;
+}
+
+/* ----------------- BUTTONS ----------------- */
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.resume-button,
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.resume-button {
+  background: black;
+  color: white;
+}
+
+.email-button {
+  background: #eee;
+  color: #111;
+}
+
+body.dark-mode .email-button {
+  background: #333;
+  color: white;
+}
+
+.resume-button:hover,
+.email-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.resume-button:active,
+.email-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.resume-button:hover .btn-icon,
+.email-button:hover .btn-icon {
+  transform: translateY(1px);
+}
+
+/* ----------------- RIGHT / TOGGLE ----------------- */
+.right {
+  display: flex;
+  align-items: center;
+  margin-bottom: 110px;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #e5e5e5;
+  border-radius: 999px;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  fill: #111;
+  stroke: #111;
+  transition: opacity 0.3s ease;
+}
+
+.sun {
+  opacity: 0;
+}
+
+.theme-switch input:checked + .slider {
+  background: #111;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.theme-switch input:checked + .slider .knob {
+  transform: translateX(26px);
+}
+
+.theme-switch input:checked + .slider .moon {
+  opacity: 0;
+}
+
+.theme-switch input:checked + .slider .sun {
+  opacity: 1;
+  fill: #ffae00;
+  stroke: #ffae00;
+}
+
+.theme-switch:hover .slider {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------------- CONTENT SECTIONS ----------------- */
+.content-wrapper {
+  max-width: 1150px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.section-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.section-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .section-card {
+  background: #242424;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .section-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+  background: #111;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode .section-icon {
+  background: #333;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .section-title {
+  color: white;
+}
+
+.section-text {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .section-text {
+  color: #aaa;
+}
+
+/* ----------------- EXPERIENCE ITEMS ----------------- */
+.experience-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  transition: border-color 0.3s ease;
+}
+
+body.dark-mode .experience-item {
+  border-bottom-color: #333;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.year-dot {
+  width: 8px;
+  height: 8px;
+  background: #111;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode .year-dot {
+  background: white;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-year {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 4px 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .experience-year {
+  color: #999;
+}
+
+.job-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .job-title {
+  color: white;
+}
+
+.company-name {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .company-name {
+  color: #999;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 968px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    gap: 18px;
+  }
+
+  .pfp {
+    width: 140px;
+    height: 140px;
+  }
+
+  .middle {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .button-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .resume-button,
+  .email-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right {
+    margin-bottom: 0;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+        @media (max-width: 480px) {
+            .profile-card {
+                padding: 18px;
+            }
+
+            .name {
+                font-size: 26px;
+            }
+
+            .button-row {
+                gap: 8px;
+            }
+
+            .resume-button,
+            .email-button {
+                padding: 10px 14px;
+            }
+        }

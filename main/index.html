@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- ================= PROFILE CARD ================= -->
+    <header class="profile-card">
+        <div class="left">
+            <img 
+                src="./Materials/Sample.jpg" 
+                alt="Profile picture of Isaiah Daniel H. Formacion"
+                class="pfp"
+            >
+        </div>
+
+        <div class="middle">
+            <div class="name-row">
+                <h1 class="name">Isaiah Daniel H. Formacion</h1>
+                <img 
+                    src="./Materials/verified.png" 
+                    alt="Verified account"
+                    class="verification-icon"
+                >
+            </div>
+
+            <div class="location-row">
+                <img 
+                    src="./Materials/location.png" 
+                    alt="Location icon"
+                    class="location-icon"
+                >
+                <span class="location-desc">
+                    <strong>Caloocan City</strong>
+                </span>
+            </div>
+
+            <p class="role-desc">
+                Front-End Web Developer · IT Specialist
+            </p>
+
+            <div class="button-row">
+                <button class="resume-button" type="button">
+                    <img 
+                        src="./Materials/resume.png" 
+                        alt="" 
+                        class="btn-icon"
+                        aria-hidden="true"
+                    >
+                    <span>Download Resume</span>
+                </button>
+
+                <a href="isaiah.formacion@gmail.com">
+                    <button class="email-button" type="button" href="isaiah.formacion@gmail.com">
+                    <img 
+                        src="./Materials/email.png" 
+                        alt="" 
+                        class="btn-icon"
+                        aria-hidden="true"
+                    >
+                    <span>Send Email</span>
+                </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="right">
+            <label class="theme-switch">
+                <input 
+                    type="checkbox" 
+                    id="darkToggle" 
+                    aria-label="Toggle dark mode"
+                >
+                <span class="slider">
+                    <span class="knob">
+                        <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                        </svg>
+                        <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="4"/>
+                            <line x1="12" y1="20" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+                            <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="4" y2="12"/>
+                            <line x1="20" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+                            <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </header>
+
+    <!-- ================= CONTENT GRID ================= -->
+    <div class="content-wrapper">
+        
+        <!-- ================= ABOUT ME ================= -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <h3 class="section-title">About</h3>
+            </div>
+            <p class="section-text">
+                I'm a full-stack developer specializing in developing end-to-end solutions with Laravel, PHP, JavaScript, and Node.js. I work on web applications, building RESTful APIs, creating responsive front-end interfaces, and managing database systems using MySQL and Firebase.
+                <br><br>
+                Currently pursuing a Bachelor of Science in Information Technology at Sorsogon State University - Bulan Campus. I have experience working with MGTech IT Solutions, where I developed and maintained full-stack infrastructure for real-time applications including an Election Vote Count System for the 2024 Senatorial Elections.
+                <br><br>
+                I'm skilled in front-end technologies like React.js, Vue.js, Next.js, React Native, HTML, CSS, and Tailwind, as well as back-end frameworks including Laravel and Node.js. I'm passionate about creating efficient, secure, and scalable full-stack solutions that deliver exceptional user experiences.
+            </p>
+        </div>
+
+        <!-- ================= WORK EXPERIENCE ================= -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">💼</div>
+                <h3 class="section-title">Experience</h3>
+            </div>
+
+            <div class="experience-item">
+                <div class="year-dot"></div>
+                <div class="experience-content">
+                    <p class="experience-year">2025</p>
+                    <h4 class="job-title">Web Developer (Project Contributor)</h4>
+                    <p class="company-name">Barangay South Triangle Website - MGTech IT Solutions</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="year-dot"></div>
+                <div class="experience-content">
+                    <p class="experience-year">2024</p>
+                    <h4 class="job-title">Backend Developer</h4>
+                    <p class="company-name">MGTech IT Solutions</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="year-dot"></div>
+                <div class="experience-content">
+                    <p class="experience-year">2023</p>
+                    <h4 class="job-title">Freelancing</h4>
+                    <p class="company-name">Started doing Projects from clients</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="year-dot"></div>
+                <div class="experience-content">
+                    <p class="experience-year">2022</p>
+                    <h4 class="job-title">Hello World! 👋</h4>
+                    <p class="company-name">Wrote my first line of code</p>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- ================= ABOUT ME ================= -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <h3 class="section-title">Tech Stack</h3>
+            </div>
+            <p class="section-text">
+                I'm a full-stack developer specializing in developing end-to-end solutions with Laravel, PHP, JavaScript, and Node.js. I work on web applications, building RESTful APIs, creating responsive front-end interfaces, and managing database systems using MySQL and Firebase.
+                <br><br>
+                Currently pursuing a Bachelor of Science in Information Technology at Sorsogon State University - Bulan Campus. I have experience working with MGTech IT Solutions, where I developed and maintained full-stack infrastructure for real-time applications including an Election Vote Count System for the 2024 Senatorial Elections.
+                <br><br>
+                I'm skilled in front-end technologies like React.js, Vue.js, Next.js, React Native, HTML, CSS, and Tailwind, as well as back-end frameworks including Laravel and Node.js. I'm passionate about creating efficient, secure, and scalable full-stack solutions that deliver exceptional user experiences.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="./Script.js">
+        
+    </script>
+
+</body>
+</html>
